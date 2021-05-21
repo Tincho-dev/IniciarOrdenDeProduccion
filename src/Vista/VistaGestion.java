@@ -33,7 +33,7 @@ public class VistaGestion extends javax.swing.JFrame {
         labelGestionOP = new javax.swing.JLabel();
         botonIniciarOP = new javax.swing.JButton();
         botonPausa = new javax.swing.JButton();
-        vistaColoresDelModelo = new javax.swing.JComboBox();
+        comboBoxColoresDelModelo = new javax.swing.JComboBox();
         labelTurno = new javax.swing.JLabel();
         botonCerrarSesion = new javax.swing.JButton();
         textFieldSKU = new javax.swing.JTextField();
@@ -75,7 +75,7 @@ public class VistaGestion extends javax.swing.JFrame {
         labelGestionOP.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         labelGestionOP.setText("Gestion de Orden de Produccion");
 
-        botonIniciarOP.setText("Iniciar nueva Gestion");
+        botonIniciarOP.setText("Iniciar nueva OP");
         botonIniciarOP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonIniciarOPActionPerformed(evt);
@@ -89,9 +89,9 @@ public class VistaGestion extends javax.swing.JFrame {
             }
         });
 
-        vistaColoresDelModelo.addActionListener(new java.awt.event.ActionListener() {
+        comboBoxColoresDelModelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                vistaColoresDelModeloActionPerformed(evt);
+                comboBoxColoresDelModeloActionPerformed(evt);
             }
         });
 
@@ -188,13 +188,13 @@ public class VistaGestion extends javax.swing.JFrame {
                                         .addComponent(labelNombreDeUsuario)
                                         .addGap(34, 34, 34)
                                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(botonIniciarOP, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                             .addComponent(labelLineaDeProduccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(botonPausa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(textFiledLineaDeProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(textFiledLineaDeProduccion, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(botonIniciarOP))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(84, 84, 84)
@@ -220,7 +220,7 @@ public class VistaGestion extends javax.swing.JFrame {
                                                     .addComponent(jTextField4))
                                                 .addGap(65, 65, 65)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(vistaColoresDelModelo, 0, 89, Short.MAX_VALUE)
+                                                    .addComponent(comboBoxColoresDelModelo, 0, 89, Short.MAX_VALUE)
                                                     .addComponent(textFieldSKU)))
                                             .addGroup(layout.createSequentialGroup()
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -245,20 +245,25 @@ public class VistaGestion extends javax.swing.JFrame {
                     .addComponent(labelTurno)
                     .addComponent(labelNombreDeUsuario)
                     .addComponent(jLabel12))
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonIniciarOP)
-                    .addComponent(textFieldSKU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(textFieldSKU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonIniciarOP)
+                        .addGap(6, 6, 6)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonPausa)
-                    .addComponent(vistaColoresDelModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboBoxColoresDelModelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -326,16 +331,15 @@ public class VistaGestion extends javax.swing.JFrame {
      botonCerrarSesion();
     }//GEN-LAST:event_botonCerrarSesionActionPerformed
 
-    private void vistaColoresDelModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vistaColoresDelModeloActionPerformed
+    private void comboBoxColoresDelModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxColoresDelModeloActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_vistaColoresDelModeloActionPerformed
+    }//GEN-LAST:event_comboBoxColoresDelModeloActionPerformed
 
     private void textFieldSKUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldSKUActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldSKUActionPerformed
 
     private void textFieldSKUKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldSKUKeyPressed
-        // TODO add your handling code here:
         establecerColores();
     }//GEN-LAST:event_textFieldSKUKeyPressed
 
@@ -377,6 +381,7 @@ public class VistaGestion extends javax.swing.JFrame {
     public static javax.swing.JButton botonCerrarSesion;
     public static javax.swing.JButton botonIniciarOP;
     public static javax.swing.JButton botonPausa;
+    public static javax.swing.JComboBox comboBoxColoresDelModelo;
     public static javax.swing.JLabel jLabel10;
     public static javax.swing.JLabel jLabel12;
     public static javax.swing.JLabel jLabel3;
@@ -402,6 +407,5 @@ public class VistaGestion extends javax.swing.JFrame {
     public static javax.swing.JLabel labelTurno;
     public static javax.swing.JTextField textFieldSKU;
     public static javax.swing.JTextField textFiledLineaDeProduccion;
-    public static javax.swing.JComboBox vistaColoresDelModelo;
     // End of variables declaration//GEN-END:variables
 }
