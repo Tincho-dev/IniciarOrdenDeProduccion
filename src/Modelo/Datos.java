@@ -1,16 +1,17 @@
  
 package Modelo;
 
-import static Controlador.ControladorGestion.hora;
 import java.util.*;
 import Vista.*;
+import static java.lang.Integer.parseInt;
+import java.time.LocalDateTime;
 
 public class Datos {
     
     public static VistaAutenticacion vistaAutenticacion = new VistaAutenticacion();
     public static VistaGestion vistaGestion = new VistaGestion();
     public static VistaFinalizar vistaFinalizar = new VistaFinalizar();
-    public static int hora = hora();
+    public static int horaActual = hora();
     public static Fecha fecha = new Fecha();
     
     //arrays: 
@@ -105,13 +106,19 @@ public class Datos {
     return lineaDeProduccion;
     }
     
+     public static int hora() {
+        LocalDateTime fecha = LocalDateTime.now();
+        int hora = parseInt(String.valueOf(fecha.getHour()));
+
+        return hora;
+    }
 
     public static Turno calcularTurnoActual() {
         Turno turnoActualCalculo = null;
-        if (hora >= coleccionTurnos.get(1).getHoraFin() && hora <= coleccionTurnos.get(2).getHoraFin()) {
+        if (horaActual >= coleccionTurnos.get(1).getHoraFin() && horaActual <= coleccionTurnos.get(2).getHoraFin()) {
             turnoActualCalculo = coleccionTurnos.get(2);
         } else {
-            if (hora >= coleccionTurnos.get(1).getHoraInicio() && hora <= coleccionTurnos.get(1).getHoraFin()) {
+            if (horaActual >= coleccionTurnos.get(1).getHoraInicio() && horaActual <= coleccionTurnos.get(1).getHoraFin()) {
                 turnoActualCalculo = coleccionTurnos.get(1);
             } else {
                 System.out.println("Fuera de horario laboral");

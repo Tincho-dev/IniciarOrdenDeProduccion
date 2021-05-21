@@ -4,7 +4,7 @@ public class Usuario {
 
     private String usuario;
     private String contraseña;
-    private String apellidoYNombre;
+    private String apellidoYNombre;//??
 
     public Usuario(String apellidoYNombre) {
         this.apellidoYNombre = apellidoYNombre;

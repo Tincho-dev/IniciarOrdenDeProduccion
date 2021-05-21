@@ -4,6 +4,7 @@ package Modelo;
 public class Objetivo {
     
     private int cantDe1ra;
+    private int hora;
 
     public Objetivo(int cantDe1ra) {
         this.cantDe1ra = cantDe1ra;
