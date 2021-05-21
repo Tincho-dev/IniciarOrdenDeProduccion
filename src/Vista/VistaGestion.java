@@ -110,6 +110,11 @@ public class VistaGestion extends javax.swing.JFrame {
                 textFieldSKUActionPerformed(evt);
             }
         });
+        textFieldSKU.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                textFieldSKUKeyPressed(evt);
+            }
+        });
 
         jTextField2.setText("0");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -328,6 +333,11 @@ public class VistaGestion extends javax.swing.JFrame {
     private void textFieldSKUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldSKUActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldSKUActionPerformed
+
+    private void textFieldSKUKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldSKUKeyPressed
+        // TODO add your handling code here:
+        establecerColores();
+    }//GEN-LAST:event_textFieldSKUKeyPressed
 
     /**
      * @param args the command line arguments

@@ -142,12 +142,17 @@ public class ControladorGestion {
     }
     public static void establecerColores()
     {
-//        jComboBox2.addItem(color1.getDescripcion());
-//        jComboBox2.addItem(color2.getDescripcion());
-//        jComboBox2.addItem(color3.getDescripcion());
-//        jComboBox2.addItem(color4.getDescripcion());
-//        jComboBox2.addItem(color5.getDescripcion());
-//        jComboBox2.addItem(color6.getDescripcion());
+        vistaColoresDelModelo.removeAllItems();
+        ArrayList<ModeloCalzado> calzados = establecerCalzados();
+        for (int i = 0; i < calzados.size(); i++) 
+            
+            if((textFieldSKU.getText()).equals(calzados.get(i).getSKU())){
+                for (int j = 0; j < calzados.get(i).getColoresCalzado().size(); j++) {
+                    String color = calzados.get(i).getColoresCalzado().get(j).getDescripcion();
+                    vistaColoresDelModelo.addItem(color);
+                }
+                
+        }
     }
     
     public static void limpiarColores(){
