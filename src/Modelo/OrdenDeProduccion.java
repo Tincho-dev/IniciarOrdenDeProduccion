@@ -24,8 +24,6 @@ public class OrdenDeProduccion{
         this.objetivo = objetivos;
         this.horarioParaObjetivos = new HorarioParaObjetivos();
     }
-
-
     public int getHorario() {
         return horario;
     }
@@ -74,8 +72,6 @@ public class OrdenDeProduccion{
         this.estado = estado;
     }
 
-   
-
     public SupervisorDeLinea getSupervisor() {
         return supervisor;
     }
@@ -101,6 +97,5 @@ public class OrdenDeProduccion{
     }
 
     public void setEstado(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+     }
 }

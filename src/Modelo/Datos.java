@@ -1,9 +1,10 @@
  
 package Modelo;
 
-import static Controlador.ControladorGestion.hora;
 import java.util.*;
 import Vista.*;
+import static java.lang.Integer.parseInt;
+import java.time.LocalDateTime;
 
 public class Datos {
     
@@ -105,6 +106,12 @@ public class Datos {
     return lineaDeProduccion;
     }
     
+     public static int hora() {
+        LocalDateTime fecha = LocalDateTime.now();
+        int hora = parseInt(String.valueOf(fecha.getHour()));
+
+        return hora;
+    }
 
     public static Turno calcularTurnoActual() {
         Turno turnoActualCalculo = null;

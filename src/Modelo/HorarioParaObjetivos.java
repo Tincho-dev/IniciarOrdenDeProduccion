@@ -1,16 +1,13 @@
 
 package Modelo;
 
-import static Controlador.ControladorGestion.*;
-import static Modelo.Datos.turnoActual;
+import static Modelo.Datos.*;
 
 public class HorarioParaObjetivos {
-    int horaInicio= hora();
+    int horaInicio= hora;
     int horaDeCierre = turnoActual.getHoraFin();
-    Fecha fecha;
+    Fecha fechaActual = fecha;
 
     public HorarioParaObjetivos() {
     }
-    
-    
 }
