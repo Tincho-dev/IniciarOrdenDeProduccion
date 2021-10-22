@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-22T15:23:20.369Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="h5UHLc-oPwilKBLOmpUD" version="15.5.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-22T15:53:08.667Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="3DdG8fnVRl02XluCWL-W" version="15.5.8" type="github">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
     <mxGraphModel dx="1278" dy="583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
@@ -7,13 +7,20 @@
         <mxCell id="1BoHC46hiFrLCXOL3lTc-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1BoHC46hiFrLCXOL3lTc-1" target="1BoHC46hiFrLCXOL3lTc-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="1BoHC46hiFrLCXOL3lTc-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="1BoHC46hiFrLCXOL3lTc-1" target="1BoHC46hiFrLCXOL3lTc-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="1BoHC46hiFrLCXOL3lTc-1" value=":IniciarOPControlador" style="html=1;" vertex="1" parent="1">
           <mxGeometry x="440" y="360" width="160" height="50" as="geometry" />
         </mxCell>
         <mxCell id="1BoHC46hiFrLCXOL3lTc-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="1">
           <mxGeometry x="140" y="389" width="300" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="1BoHC46hiFrLCXOL3lTc-5" value="iniciarOP(OPactual)" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
+        <mxCell id="1BoHC46hiFrLCXOL3lTc-5" value="iniciarOP(OPactual,turnoActual,objetivos)" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
           <mxGeometry x="210" y="363" width="80" height="26" as="geometry" />
         </mxCell>
         <mxCell id="1BoHC46hiFrLCXOL3lTc-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.182;entryY=1.07;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="1BoHC46hiFrLCXOL3lTc-7" target="1BoHC46hiFrLCXOL3lTc-7">
@@ -24,11 +31,20 @@
         <mxCell id="1BoHC46hiFrLCXOL3lTc-7" value="OrdenDeProduccion: OPActual" style="html=1;" vertex="1" parent="1">
           <mxGeometry x="425" y="550" width="190" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="1BoHC46hiFrLCXOL3lTc-9" value="1: Iniciar()" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
-          <mxGeometry x="520" y="460" width="80" height="26" as="geometry" />
+        <mxCell id="1BoHC46hiFrLCXOL3lTc-9" value="2: Iniciar(jornada)" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
+          <mxGeometry x="540" y="450" width="80" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="1BoHC46hiFrLCXOL3lTc-15" value="1.1: setEstado(Activa)" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
-          <mxGeometry x="460" y="640" width="80" height="26" as="geometry" />
+        <mxCell id="1BoHC46hiFrLCXOL3lTc-15" value="2.2: setEstado(Activa)" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
+          <mxGeometry x="460" y="650" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1BoHC46hiFrLCXOL3lTc-20" value=":JornadaLaboral" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="460" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1BoHC46hiFrLCXOL3lTc-23" value="1: jornada = crearJornada(turnoActual,objetivos)" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
+          <mxGeometry x="710" y="350" width="80" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1BoHC46hiFrLCXOL3lTc-24" value="2.1setJornada(jornada)" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="1">
+          <mxGeometry x="460" y="630" width="80" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
